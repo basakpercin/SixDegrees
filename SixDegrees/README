@@ -1,0 +1,119 @@
+  1. The title of the homework.
+
+The Six Degrees of Collaboration
+
+2. Author’s name (you).
+
+Basak Percin
+
+3. How much time the assignment took you in hours.
+
+I think around 40 hours, maybe more.
+
+4. The purpose of the program.
+
+The program takes artists.txt which includes the artist names and songs. Program
+creates a collaboration graph using this input, in which vertices are artists 
+and edges are the collaboration songs. Using 4 user given commands (bfs, dfs, 
+not and quit) either from command line or from a command file, bfs prints the 
+shortest path between 2 artists, dfs prints a path between 2 artists, not 
+function takes in 2 artists and a list of artists to be excluded and prints the 
+shortest path and the collaborated songs between given 2 artists excluding the 
+artists in exclude list. Quit, exists the program. If there is no path between 
+the 2 artists, program prints a message stating there is no path. If any of the 
+artists is not in the graph, program prints a message stating artist X is not 
+in the dataset. Output will be written to either an output file or to the 
+standard output stream. 
+
+5. Acknowledgements for any help you received.
+
+Office hours with TAs (Tejas and Igor) for discussion of how to implement bfs, 
+dfs and not functions. Graph representations and how to visualize the graph in 
+the project for easier implementation. 
+During the presentation meeting with Prof. Allen, clarified how to create and 
+populate the graph. 
+Geeksforgeeks.org for implementation of bfs and dfs.
+Cplusplus.com for list, vector, queue, stack and unordered_map classes and their
+member functions. 
+Stackoverflow - for understanding how to print to output stream or file.
+
+Previous MetroSim project on how to handle files, command line arguements, 
+handling commands, output to file and writing Makefile.
+Makefile source: CS15 lab05 and lecture
+
+6. The files that you provided and a short description of what each file is and
+its purpose.
+
+Artist.h - interface of Artist class.
+Artist.cpp - implementation of Artist class.
+
+    - Creates Artists instances using the input artist file. Artist class has 
+    artist’s name and their discography. Also has a useful function to find the 
+    collaborated songs between 2 artists. 
+
+Collabgraph.h - interface of CollabGraph class.
+CollabGraph.cpp - implementation of CollabGraph class.
+
+    - Creates a CollabGraph, takes artists and creates vertices, has many useful
+    functions which are used in populating the graph, setting edges/getting 
+    edges, setting predecessors/getting predecessors, marks vertices as 
+    visited/not visited, clearing the metadata of vertices, getting the vertex 
+    neighbors according to their collab songs and reporting the path according 
+    to their predecessors.
+
+SixDegrees.h - interface of SixDegrees class.
+SixDegrees.cpp - implementation of SixDegrees class.
+
+    - Initializes a CollabGraph graph, populates the graph, sets the edges. 
+    Includes the functions bfs, dfs and not. Also printing is done in SixDegrees 
+    class.
+
+main.cpp - Handles opening, creating and manipulating files. Handles commands:
+    bfs, dfs, not, quit.
+
+Makefile - For compiling and cleaning.
+
+README - this file
+
+test_input.txt - includes the test commands which used for testing.
+
+test_main.cpp - test file for testing cases.
+
+artists.txt - Given artists file.
+
+7. Description of how to compile and run your program.
+     - Compile using
+            make
+
+     - run executable with
+        ./SixDegrees artists.txt [commands.txt] [output.txt]
+
+     - for testing file compiling and use:
+            make test
+        ./test_SixDegrees artists.txt [commands.txt] [output.txt]
+
+8. Description of the major data structures and the algorithms used.
+
+- Used unordered_map which is a kind of hash map for CollabGraph
+- Used vector for passing the artists got from user to populate the CollabGraph,
+and for getting the list of artists to exclude.
+- Used stack for reporting the path from source artist to destination artist.
+It's LIFO structure helps creating a path from the destination to source.
+- Used queue for implementing the breadth-first search function, it's FIFO 
+structure helps finding the shortest path.
+
+
+9. Details and an explanation of how you tested the various parts of the 
+assignment and program as a whole
+
+First, during the implementation process I have tested and compared my program 
+in small pieces with the given the_SixDegrees program. I put various commands to 
+the commands.txt file and printed both outputs to output.txt file. Comparing 
+these 2 output files helped me to correct my traversal functions and output 
+prints. I have tested the edge cases with the same approach and wrote my test 
+file accordingly. After uploading to gradescope I realized I had missed some 
+edge cases and fine details in my implementation. (Like my not function was not 
+working properly with the same artist given as the destination artist and to be 
+excluded artist). Then I added these to my test file.
+
+I couldn’t understand how to pass the stress test nor how to test it.

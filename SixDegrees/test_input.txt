@@ -1,0 +1,79 @@
+dfs
+Adam Levine
+Adam Levine
+bfs
+Adam Levine
+Adam Levine
+not
+Adam Levine
+Adam Levine
+*
+not
+Adam Levine
+Adele
+Adele
+*
+not
+Adam Levine
+Adele
+Adam Levine
+Adele
+*
+dfs
+Adam Levine
+xx
+bfs
+Adam Levine
+xx
+not
+Adam Levine
+xx
+*
+not
+Adam Levine
+Adele
+xx
+xx
+xx
+*
+dfs
+Adam Levine
+Alicia Keys
+dfs
+Adam Levine
+Alessia Cara
+dfs
+Adam Levine
+Afrojack
+bfs
+Adam Levine
+Alicia Keys
+bfs
+Adam Levine
+Alessia Cara
+bfs
+Adam Levine
+Afrojack
+not
+Adam Levine
+Alicia Keys
+Adele
+Afrojack
+Alessia Cara
+*
+not
+Adam Levine
+Alicia Keys
+Afrojack
+Alessia Cara
+*
+not
+Adele
+Afrojack
+Alessia Cara
+Alicia Keys
+*
+not
+Adele
+Afrojack
+*
